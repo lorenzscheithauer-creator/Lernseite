@@ -49,7 +49,8 @@ const quizQuestions = [
         answers: [
             { text: "Grundsatz der Jährlichkeit und der Wirtschaftlichkeit.", correct: false },
             { text: "Grundsatz der Öffentlichkeit und der Gesamtdeckung.", correct: false },
-            { text: "Grundsatz der Einheit und der Klarheit.", correct: true }
+            { text: "Grundsatz der Einheit und der Klarheit.", correct: true },
+            { text: "Grundsatz der Vorherigkeit und der Einzelveranschlagung.", correct: false }
         ]
     },
     {
@@ -87,6 +88,69 @@ const quizQuestions = [
             { text: "Eine drastische Reduzierung der Verwaltungskosten in allen Bereichen.", correct: false },
             { text: "Eine deutschlandweit einheitliche und vergleichbare Darstellung aller kommunalen Haushalte.", correct: false }
         ]
+    },
+    {
+        question: "Was besagt der Haushaltsgrundsatz der Gesamtdeckung?",
+        answers: [
+            { text: "Jeder Ausgabeposten im Haushalt muss durch eine spezifische, zweckgebundene Einnahme gedeckt sein.", correct: false },
+            { text: "Sämtliche Einnahmen dienen als Deckung für sämtliche Ausgaben; Einnahmen sind also nicht an einen bestimmten Zweck gebunden.", correct: true },
+            { text: "Der Haushaltsplan muss alle Vermögenswerte und Schulden des Staates umfassen.", correct: false },
+            { text: "Die Summe der Ausgaben darf die Summe der Einnahmen unter keinen Umständen übersteigen.", correct: false }
+        ]
+    },
+    {
+        question: "Wer besitzt laut Finanzverfassung im Grundgesetz die Gesetzgebungskompetenz für die wichtigsten Gemeinschaftsteuern wie die Einkommen- und Umsatzsteuer?",
+        answers: [
+            { text: "Die Länder (Bundesländer).", correct: false },
+            { text: "Die Gemeinden (Kommunen).", correct: false },
+            { text: "Ein gemeinsamer Ausschuss von Bund und Ländern.", correct: false },
+            { text: "Der Bund.", correct: true }
+        ]
+    },
+    {
+        question: "Was ist das primäre Ziel des Länderfinanzausgleichs (LFA) in Deutschland?",
+        answers: [
+            { text: "Die vollständige Angleichung der Finanzkraft aller Bundesländer auf einen identischen Wert.", correct: false },
+            { text: "Die teilweise Angleichung der unterschiedlichen Finanzkraft der Länder zur Schaffung gleichwertiger Lebensverhältnisse im Bundesgebiet.", correct: true },
+            { text: "Die Finanzierung von großen Infrastrukturprojekten wie Autobahnen und Flughäfen durch die Gemeinschaft der Länder.", correct: false },
+            { text: "Die zentrale Erhebung von Steuern, die anschließend vom Bund an die Länder verteilt werden.", correct: false }
+        ]
+    },
+    {
+        question: "Worin liegt der fundamentale Unterschied zwischen einer Steuer und einer Gebühr?",
+        answers: [
+            { text: "Steuern sind immer freiwillig, während Gebühren gesetzlich erzwungen werden.", correct: false },
+            { text: "Eine Gebühr wird für eine konkrete staatliche Gegenleistung entrichtet, eine Steuer hingegen ist eine voraussetzungslose Geldleistung ohne Anspruch auf eine individuelle Gegenleistung.", correct: true },
+            { text: "Steuern fließen immer an den Bund, Gebühren immer an die Kommunen.", correct: false },
+            { text: "Steuern dürfen nur für Investitionen, Gebühren nur für Personalkosten verwendet werden.", correct: false }
+        ]
+    },
+    {
+        question: "Wie wird die Hundesteuer steuerrechtlich korrekt klassifiziert?",
+        answers: [
+            { text: "Als eine direkte Bundessteuer, die der Finanzierung des Bundeshaushalts dient.", correct: false },
+            { text: "Als eine Verbrauchsteuer, da sie auf die \"Haltung\" eines Tieres erhoben wird.", correct: false },
+            { text: "Als eine örtliche Aufwandsteuer, die auf die wirtschaftliche Leistungsfähigkeit für einen besonderen persönlichen Aufwand (Luxus) abzielt.", correct: true },
+            { text: "Als eine Zwecksteuer, deren Einnahmen ausschließlich für die Beseitigung von Hundekot verwendet werden dürfen.", correct: false }
+        ]
+    },
+    {
+        question: "Die Grafik zur Staatsverschuldung in Brandenburg zeigt eine massive Neuverschuldung in den Jahren um 2020 bis 2022. Was war die wahrscheinlichste Ursache dafür?",
+        answers: [
+            { text: "Die planmäßige Tilgung von Altschulden, die zu Umschuldungen führte.", correct: false },
+            { text: "Der Bau des Flughafens BER, der vollständig vom Land Brandenburg finanziert wurde.", correct: false },
+            { text: "Notlagen- und kreditfinanzierte Hilfspakete zur Bewältigung der Corona-Pandemie und der Energiekrise.", correct: true },
+            { text: "Eine Umstellung des Rechnungswesens von Kameralistik auf Doppik.", correct: false }
+        ]
+    },
+    {
+        question: "Das \"Wagner'sche Gesetz\" erklärt das langfristige Wachstum der Staatsausgaben. Was ist eine der Kernaussagen dieses Gesetzes?",
+        answers: [
+            { text: "Politiker neigen dazu, vor Wahlen teure Versprechen zu machen, die die Staatsausgaben erhöhen.", correct: false },
+            { text: "Mit fortschreitender Industrialisierung und gesellschaftlicher Entwicklung steigt der Bedarf an öffentlichen Leistungen (z.B. Bildung, Infrastruktur, Soziales), was zwangsläufig zu höheren Staatsausgaben führt.", correct: true },
+            { text: "Ineffizienz in der Verwaltung führt dazu, dass jedes Jahr automatisch mehr Geld ausgegeben wird.", correct: false },
+            { text: "Alle 20 Jahre kommt es zu einer unvorhergesehenen Krise, die die Staatsausgaben sprunghaft ansteigen lässt.", correct: false }
+        ]
     }
 ];
 
@@ -106,6 +170,7 @@ function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     quizContent.classList.remove('hide');
+    progressText.classList.remove('hide');
     resultsContainer.classList.add('hide');
     nextButton.classList.add('hide');
     showQuestion();
@@ -164,9 +229,10 @@ function selectAnswer(e) {
 
 function showResults() {
     quizContent.classList.add('hide');
-    progressText.innerText = "Quiz beendet!";
+    progressText.classList.add('hide');
     resultsContainer.classList.remove('hide');
-    scoreText.innerText = `Sie haben ${score} von ${quizQuestions.length} Fragen richtig beantwortet!`;
+    scoreText.innerText = `Auswertung: Sie haben ${score} von ${quizQuestions.length} Fragen richtig beantwortet!`;
+    nextButton.classList.add('hide');
 }
 
 nextButton.addEventListener('click', () => {
