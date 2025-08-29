@@ -1,155 +1,268 @@
 const quizQuestions = [
     {
-        question: "Welches sind die drei wichtigsten Einnahmequellen einer typischen deutschen Gemeinde?",
+        question: "Welche Aussage zum \"Wagner'schen Gesetz\" der wachsenden Staatsausgaben ist korrekt?",
         answers: [
-            { text: "Einkommensteuer, Erbschaftsteuer und Hundesteuer.", correct: false },
-            { text: "Gewerbesteuer, Grundsteuer und der Gemeindeanteil an der Einkommensteuer.", correct: true },
-            { text: "Umsatzsteuer, LKW-Maut und Gebühren für Personalausweise.", correct: false },
-            { text: "Zuweisungen vom Bund, Körperschaftsteuer und Parkgebühren.", correct: false }
+            { text: "Es erklärt, dass mit fortschreitender Industrialisierung und steigendem Wohlstand der Bedarf an öffentlichen Leistungen überproportional zunimmt.", correct: true },
+            { text: "Es besagt, dass Staatsausgaben hauptsächlich durch ineffiziente Bürokratien wachsen.", correct: false },
+            { text: "Es ist eine gesetzliche Vorschrift, die das jährliche Wachstum der Staatsausgaben auf 2 % begrenzt.", correct: false },
+            { text: "Es beschreibt das Phänomen, dass Politiker vor Wahlen die Ausgaben erhöhen, um wiedergewählt zu werden.", correct: false }
         ]
     },
     {
-        question: "Was beschreibt der \"Hebesatz\" im kommunalen Steuerrecht?",
+        question: "Welcher Haushaltsgrundsatz wird verletzt, wenn ein Parlament den Haushalt für das laufende Jahr erst im Juni beschließt?",
         answers: [
-            { text: "Ein fester Steuersatz, der vom Bund für alle Gemeinden einheitlich festgelegt wird.", correct: false },
-            { text: "Der Prozentsatz, den eine Gemeinde von den Landessteuern erhält.", correct: false },
-            { text: "Ein von der Gemeinde festgelegter Multiplikator, mit dem der Steuermessbetrag bei der Gewerbe- und Grundsteuer multipliziert wird.", correct: true },
-            { text: "Die Obergrenze für die Aufnahme von Krediten pro Einwohner.", correct: false }
+            { text: "Grundsatz der Vorherigkeit", correct: true },
+            { text: "Grundsatz der Öffentlichkeit", correct: false },
+            { text: "Grundsatz der Jährlichkeit", correct: false },
+            { text: "Grundsatz der Gesamtdeckung", correct: false }
         ]
     },
     {
-        question: "Worin besteht der wesentliche Unterschied zwischen dem Ergebnishaushalt und dem Finanzhaushalt in der Doppik?",
+        question: "Welche Steuerart ist eine Gemeinschaftsteuer, deren Aufkommen sich Bund, Länder und Gemeinden teilen?",
         answers: [
-            { text: "Der Ergebnishaushalt zeigt die Investitionen, der Finanzhaushalt die Personalkosten.", correct: false },
-            { text: "Der Ergebnishaushalt bildet den Ressourcenverbrauch (z.B. Abschreibungen) ab, während der Finanzhaushalt die tatsächlichen Geldflüsse (Ein- und Auszahlungen) darstellt.", correct: true },
-            { text: "Der Ergebnishaushalt ist für Landkreise, der Finanzhaushalt für kreisfreie Städte verpflichtend.", correct: false },
-            { text: "Im Ergebnishaushalt stehen die Einnahmen, im Finanzhaushalt die Ausgaben.", correct: false }
+            { text: "Lohn- und Einkommensteuer", correct: true },
+            { text: "Erbschaftsteuer", correct: false },
+            { text: "Gewerbesteuer", correct: false },
+            { text: "Hundesteuer", correct: false }
         ]
     },
     {
-        question: "Warum birgt die Gewerbesteuer ein erhebliches Risiko für die kommunale Haushaltsplanung?",
+        question: "Was ist der Hauptzweck des kommunalen Finanzausgleichs (KFA)?",
         answers: [
-            { text: "Weil sie sehr kompliziert zu berechnen ist und oft zu Fehlern führt.", correct: false },
-            { text: "Weil ihre Einnahmen stark von der konjunkturellen Lage der lokalen Unternehmen abhängen und daher stark schwanken können.", correct: true },
-            { text: "Weil die Bürger gegen hohe Gewerbesteuern häufig protestieren.", correct: false },
-            { text: "Weil der Bund den Hebesatz jederzeit ändern kann.", correct: false }
+            { text: "Die Verteilung von Finanzmitteln vom Land an die Kommunen, um deren unterschiedliche Finanzkraft und Aufgabenlast teilweise auszugleichen.", correct: true },
+            { text: "Die Finanzierung von Bundesprojekten in den Kommunen.", correct: false },
+            { text: "Die direkte finanzielle Unterstützung von Bürgern durch die Kommune.", correct: false },
+            { text: "Der finanzielle Ausgleich zwischen reichen und armen Kommunen durch direkte Zahlungen untereinander.", correct: false }
         ]
     },
     {
-        question: "Was ist ein \"Sondervermögen\" im öffentlichen Haushaltsrecht?",
+        question: "In welchem Teilhaushalt der Doppik werden die Abschreibungen für das Rathausgebäude erfasst?",
         answers: [
-            { text: "Eine private Spende an den Staat für einen bestimmten Zweck.", correct: false },
-            { text: "Der Teil des Haushalts, der ausschließlich für Sozialleistungen reserviert ist.", correct: false },
-            { text: "Ein für einen bestimmten Zweck eingerichteter, vom Kernhaushalt getrennter Wirtschaftsplan, der oft kreditfinanziert ist.", correct: true },
-            { text: "Die \"eiserne Reserve\" einer Regierung für unerwartete Krisen.", correct: false }
+            { text: "Im Ergebnishaushalt", correct: true },
+            { text: "Im Finanzhaushalt", correct: false },
+            { text: "Im Investitionshaushalt", correct: false },
+            { text: "In der Eröffnungsbilanz", correct: false }
         ]
     },
     {
-        question: "Die Einrichtung von Sondervermögen (\"Schattenhaushalten\") verstößt potenziell gegen welche zwei zentralen Haushaltsgrundsätze?",
+        question: "Die Maastricht-Kriterien legen eine Obergrenze für die jährliche Neuverschuldung fest. Wie hoch ist diese?",
         answers: [
-            { text: "Grundsatz der Jährlichkeit und der Wirtschaftlichkeit.", correct: false },
-            { text: "Grundsatz der Öffentlichkeit und der Gesamtdeckung.", correct: false },
-            { text: "Grundsatz der Einheit und der Klarheit.", correct: true },
-            { text: "Grundsatz der Vorherigkeit und der Einzelveranschlagung.", correct: false }
+            { text: "3 % des Bruttoinlandsprodukts (BIP)", correct: true },
+            { text: "1 % des Bruttoinlandsprodukts (BIP)", correct: false },
+            { text: "5 % der gesamten Steuereinnahmen", correct: false },
+            { text: "60 % des Bruttoinlandsprodukts (BIP)", correct: false }
         ]
     },
     {
-        question: "Was ist die Kernregel der im Grundgesetz verankerten Schuldenbremse für den Bund?",
+        question: "Was ist ein wesentlicher Vorteil der Finanzierung staatlicher Aufgaben durch Steuern gegenüber Gebühren?",
         answers: [
-            { text: "Der Bund darf absolut keine neuen Schulden aufnehmen.", correct: false },
-            { text: "Die Neuverschuldung darf die Höhe der Investitionen nicht überschreiten (Goldene Regel).", correct: false },
-            { text: "Die strukturelle, konjunkturbereinigte Neuverschuldung ist auf maximal 0,35 % des Bruttoinlandsprodukts begrenzt.", correct: true },
-            { text: "Schulden sind nur erlaubt, wenn alle Länder zustimmen.", correct: false }
+            { text: "Steuern ermöglichen die Finanzierung von Gütern, bei denen eine individuelle Zurechnung nicht möglich ist und erlauben eine soziale Staffelung nach Leistungsfähigkeit.", correct: true },
+            { text: "Steuern sind einfacher zu berechnen und verursachen weniger Verwaltungsaufwand.", correct: false },
+            { text: "Steuereinnahmen sind immer stabil und konjunkturunabhängig.", correct: false },
+            { text: "Steuern sind bei den Bürgern beliebter als Gebühren.", correct: false }
         ]
     },
     {
-        question: "Was war das zentrale Versprechen der Umstellung von der Kameralistik auf die Doppik bezüglich der Verwaltungssteuerung?",
+        question: "Die deutsche Finanzverfassung ist geregelt im...",
         answers: [
-            { text: "Eine reine Kostensenkung durch weniger Personal in der Buchhaltung.", correct: false },
-            { text: "Eine verbesserte Steuerung über Ziele, Produkte und Kennzahlen anstelle der reinen Orientierung an Einnahmen und Ausgaben.", correct: true },
-            { text: "Die Vereinfachung der Buchführung, sodass keine Fachkräfte mehr benötigt werden.", correct: false },
-            { text: "Die vollständige Abschaffung der kommunalen Verschuldung.", correct: false }
+            { text: "Grundgesetz (GG)", correct: true },
+            { text: "Bürgerlichen Gesetzbuch (BGB)", correct: false },
+            { text: "Handelsgesetzbuch (HGB)", correct: false },
+            { text: "jeweiligen Landesfinanzministerium", correct: false }
         ]
     },
     {
-        question: "Die Metastudie von Raffer (2021) spricht von einer \"Steuerungslücke\" in der Doppik. Was ist damit gemeint?",
+        question: "Welche Aussage zur Kameralistik ist FALSCH?",
         answers: [
-            { text: "Die Software für die doppische Buchführung hat gravierende Sicherheitslücken.", correct: false },
-            { text: "Es fehlt das Geld, um Controller für die Verwaltungssteuerung einzustellen.", correct: false },
-            { text: "Die Steuerungsinstrumente (z.B. Kennzahlen) sind zwar vorhanden, werden aber von der Politik und Verwaltung kaum für tatsächliche Entscheidungen genutzt.", correct: true },
-            { text: "Die Bürger verstehen die neuen doppischen Haushaltspläne nicht.", correct: false }
+            { text: "Sie stellt das vorhandene Vermögen und die Schulden in einer Bilanz dar.", correct: true },
+            { text: "Sie ist eine reine Einnahmen- und Ausgabenrechnung.", correct: false },
+            { text: "Sie orientiert sich am Geldverbrauch des Haushaltsjahres.", correct: false },
+            { text: "Sie war das traditionelle Buchführungssystem der öffentlichen Verwaltung in Deutschland.", correct: false }
         ]
     },
     {
-        question: "Welches der folgenden Ziele der Doppik-Reform gilt laut empirischen Studien als weitgehend erreicht?",
+        question: "Der Haushaltskreislauf besteht aus vier Phasen. Welche ist die korrekte Reihenfolge?",
         answers: [
-            { text: "Eine signifikant bessere und nachweisbare Steuerung durch Kennzahlen in allen Kommunen.", correct: false },
-            { text: "Eine höhere Transparenz über die tatsächliche Vermögens- und Schuldenlage der Kommune.", correct: true },
-            { text: "Eine drastische Reduzierung der Verwaltungskosten in allen Bereichen.", correct: false },
-            { text: "Eine deutschlandweit einheitliche und vergleichbare Darstellung aller kommunalen Haushalte.", correct: false }
+            { text: "Aufstellung, Beschluss, Vollzug, Kontrolle", correct: true },
+            { text: "Vollzug, Aufstellung, Beschluss, Kontrolle", correct: false },
+            { text: "Beschluss, Kontrolle, Aufstellung, Vollzug", correct: false },
+            { text: "Aufstellung, Kontrolle, Vollzug, Beschluss", correct: false }
         ]
     },
     {
-        question: "Was besagt der Haushaltsgrundsatz der Gesamtdeckung?",
+        question: "Eine Gemeinde erhöht den Hebesatz für die Grundsteuer B. Was ist die direkte Folge?",
         answers: [
-            { text: "Jeder Ausgabeposten im Haushalt muss durch eine spezifische, zweckgebundene Einnahme gedeckt sein.", correct: false },
-            { text: "Sämtliche Einnahmen dienen als Deckung für sämtliche Ausgaben; Einnahmen sind also nicht an einen bestimmten Zweck gebunden.", correct: true },
-            { text: "Der Haushaltsplan muss alle Vermögenswerte und Schulden des Staates umfassen.", correct: false },
-            { text: "Die Summe der Ausgaben darf die Summe der Einnahmen unter keinen Umständen übersteigen.", correct: false }
+            { text: "Alle Grundstückseigentümer im Gemeindegebiet müssen mehr Grundsteuer zahlen.", correct: true },
+            { text: "Unternehmen im Gewerbegebiet müssen mehr Steuern zahlen.", correct: false },
+            { text: "Die Gemeinde erhält mehr Zuweisungen vom Land.", correct: false },
+            { text: "Die Hundesteuer wird automatisch ebenfalls teurer.", correct: false }
         ]
     },
     {
-        question: "Wer besitzt laut Finanzverfassung im Grundgesetz die Gesetzgebungskompetenz für die wichtigsten Gemeinschaftsteuern wie die Einkommen- und Umsatzsteuer?",
+        question: "Was besagt das Konnexitätsprinzip im föderalen Finanzsystem?",
         answers: [
-            { text: "Die Länder (Bundesländer).", correct: false },
-            { text: "Die Gemeinden (Kommunen).", correct: false },
-            { text: "Ein gemeinsamer Ausschuss von Bund und Ländern.", correct: false },
-            { text: "Der Bund.", correct: true }
+            { text: "Wer bestellt, bezahlt: Überträgt eine höhere staatliche Ebene einer unteren neue Aufgaben, muss sie auch für deren Finanzierung sorgen.", correct: true },
+            { text: "Alle Steuern müssen im Zusammenhang mit einer staatlichen Leistung stehen.", correct: false },
+            { text: "Der Bund ist immer für die Finanzierung der Länder zuständig.", correct: false },
+            { text: "Kommunen dürfen nur Aufgaben übernehmen, die sie selbst finanzieren können.", correct: false }
         ]
     },
     {
-        question: "Was ist das primäre Ziel des Länderfinanzausgleichs (LFA) in Deutschland?",
+        question: "Was ist eine \"indirekte Steuer\"?",
         answers: [
-            { text: "Die vollständige Angleichung der Finanzkraft aller Bundesländer auf einen identischen Wert.", correct: false },
-            { text: "Die teilweise Angleichung der unterschiedlichen Finanzkraft der Länder zur Schaffung gleichwertiger Lebensverhältnisse im Bundesgebiet.", correct: true },
-            { text: "Die Finanzierung von großen Infrastrukturprojekten wie Autobahnen und Flughäfen durch die Gemeinschaft der Länder.", correct: false },
-            { text: "Die zentrale Erhebung von Steuern, die anschließend vom Bund an die Länder verteilt werden.", correct: false }
+            { text: "Eine Steuer, bei der Steuerschuldner und Steuerträger nicht identisch sind (z.B. Mehrwertsteuer).", correct: true },
+            { text: "Eine Steuer, die direkt vom Einkommen abgezogen wird.", correct: false },
+            { text: "Eine Steuer, die nur alle paar Jahre erhoben wird.", correct: false },
+            { text: "Eine Steuer, deren Aufkommen für einen bestimmten Zweck reserviert ist.", correct: false }
         ]
     },
     {
-        question: "Worin liegt der fundamentale Unterschied zwischen einer Steuer und einer Gebühr?",
+        question: "Die Schuldenbremse im Grundgesetz erlaubt dem Bund eine strukturelle Neuverschuldung von maximal...",
         answers: [
-            { text: "Steuern sind immer freiwillig, während Gebühren gesetzlich erzwungen werden.", correct: false },
-            { text: "Eine Gebühr wird für eine konkrete staatliche Gegenleistung entrichtet, eine Steuer hingegen ist eine voraussetzungslose Geldleistung ohne Anspruch auf eine individuelle Gegenleistung.", correct: true },
-            { text: "Steuern fließen immer an den Bund, Gebühren immer an die Kommunen.", correct: false },
-            { text: "Steuern dürfen nur für Investitionen, Gebühren nur für Personalkosten verwendet werden.", correct: false }
+            { text: "0,35 % des BIP", correct: true },
+            { text: "0,00 % des BIP", correct: false },
+            { text: "1,00 % des BIP", correct: false },
+            { text: "3,00 % des BIP", correct: false }
         ]
     },
     {
-        question: "Wie wird die Hundesteuer steuerrechtlich korrekt klassifiziert?",
+        question: "Welche der folgenden Einnahmen ist KEINE Gebühr?",
         answers: [
-            { text: "Als eine direkte Bundessteuer, die der Finanzierung des Bundeshaushalts dient.", correct: false },
-            { text: "Als eine Verbrauchsteuer, da sie auf die \"Haltung\" eines Tieres erhoben wird.", correct: false },
-            { text: "Als eine örtliche Aufwandsteuer, die auf die wirtschaftliche Leistungsfähigkeit für einen besonderen persönlichen Aufwand (Luxus) abzielt.", correct: true },
-            { text: "Als eine Zwecksteuer, deren Einnahmen ausschließlich für die Beseitigung von Hundekot verwendet werden dürfen.", correct: false }
+            { text: "Beitrag für den erstmaligen Anschluss eines Grundstücks an die Kanalisation.", correct: true },
+            { text: "Eintrittsgeld für das städtische Schwimmbad.", correct: false },
+            { text: "Parkschein für einen kommunalen Parkplatz.", correct: false },
+            { text: "Verwaltungsgebühr für die Ausstellung eines Personalausweises.", correct: false }
         ]
     },
     {
-        question: "Die Grafik zur Staatsverschuldung in Brandenburg zeigt eine massive Neuverschuldung in den Jahren um 2020 bis 2022. Was war die wahrscheinlichste Ursache dafür?",
+        question: "Welcher Haushaltsgrundsatz besagt, dass alle Einnahmen zur Deckung aller Ausgaben dienen und nicht zweckgebunden sind?",
         answers: [
-            { text: "Die planmäßige Tilgung von Altschulden, die zu Umschuldungen führte.", correct: false },
-            { text: "Der Bau des Flughafens BER, der vollständig vom Land Brandenburg finanziert wurde.", correct: false },
-            { text: "Notlagen- und kreditfinanzierte Hilfspakete zur Bewältigung der Corona-Pandemie und der Energiekrise.", correct: true },
-            { text: "Eine Umstellung des Rechnungswesens von Kameralistik auf Doppik.", correct: false }
+            { text: "Grundsatz der Gesamtdeckung", correct: true },
+            { text: "Grundsatz der Wirtschaftlichkeit", correct: false },
+            { text: "Grundsatz der Jährlichkeit", correct: false },
+            { text: "Grundsatz der Vollständigkeit", correct: false }
         ]
     },
     {
-        question: "Das \"Wagner'sche Gesetz\" erklärt das langfristige Wachstum der Staatsausgaben. Was ist eine der Kernaussagen dieses Gesetzes?",
+        question: "Was misst die \"Steuerquote\"?",
         answers: [
-            { text: "Politiker neigen dazu, vor Wahlen teure Versprechen zu machen, die die Staatsausgaben erhöhen.", correct: false },
-            { text: "Mit fortschreitender Industrialisierung und gesellschaftlicher Entwicklung steigt der Bedarf an öffentlichen Leistungen (z.B. Bildung, Infrastruktur, Soziales), was zwangsläufig zu höheren Staatsausgaben führt.", correct: true },
-            { text: "Ineffizienz in der Verwaltung führt dazu, dass jedes Jahr automatisch mehr Geld ausgegeben wird.", correct: false },
-            { text: "Alle 20 Jahre kommt es zu einer unvorhergesehenen Krise, die die Staatsausgaben sprunghaft ansteigen lässt.", correct: false }
+            { text: "Das Verhältnis der Steuereinnahmen zum Bruttoinlandsprodukt (BIP).", correct: true },
+            { text: "Den Anteil der indirekten Steuern an den gesamten Steuereinnahmen.", correct: false },
+            { text: "Den durchschnittlichen Steuersatz für einen Bürger.", correct: false },
+            { text: "Den Anteil, den eine einzelne Steuerart am gesamten Steueraufkommen hat.", correct: false }
+        ]
+    },
+    {
+        question: "In der Sozialen Marktwirtschaft hat der Staat unter anderem die Aufgabe...",
+        answers: [
+            { text: "für einen sozialen Ausgleich zu sorgen und Marktversagen zu korrigieren.", correct: true },
+            { text: "die Produktionsmittel zu verstaatlichen.", correct: false },
+            { text: "die Preise für alle wichtigen Güter festzulegen.", correct: false },
+            { text: "den Wettbewerb vollständig abzuschaffen.", correct: false }
+        ]
+    },
+    {
+        question: "Was ist der Unterschied zwischen der Steuerquote und der Abgabenquote?",
+        answers: [
+            { text: "Die Abgabenquote umfasst neben den Steuern auch die Sozialversicherungsbeiträge.", correct: true },
+            { text: "Es gibt keinen Unterschied, die Begriffe sind synonym.", correct: false },
+            { text: "Die Abgabenquote ist immer niedriger als die Steuerquote.", correct: false },
+            { text: "Die Steuerquote misst die Steuern von Unternehmen, die Abgabenquote die von Privatpersonen.", correct: false }
+        ]
+    },
+    {
+        question: "Eine \"Lenkungssteuer\" wie die Tabaksteuer hat primär das Ziel...",
+        answers: [
+            { text: "das Verhalten der Konsumenten in eine gewünschte Richtung zu beeinflussen (z.B. weniger rauchen).", correct: true },
+            { text: "eine möglichst hohe Einnahme für den Staat zu generieren.", correct: false },
+            { text: "die Tabakindustrie gezielt zu subventionieren.", correct: false },
+            { text: "die Verwaltungskosten des Staates zu decken.", correct: false }
+        ]
+    },
+    {
+        question: "Die Nettoinvestitionen eines öffentlichen Haushalts sind definiert als...",
+        answers: [
+            { text: "die Bruttoinvestitionen abzüglich der Abschreibungen.", correct: true },
+            { text: "die Summe aller Ausgaben für Baumaßnahmen.", correct: false },
+            { text: "die Bruttoinvestitionen abzüglich der Einnahmen aus Verkäufen von Vermögen.", correct: false },
+            { text: "alle Ausgaben, die nicht für Personal oder Soziales getätigt werden.", correct: false }
+        ]
+    },
+    {
+        question: "Welche der folgenden Aufgaben wird typischerweise von einem Landesrechnungshof wahrgenommen?",
+        answers: [
+            { text: "Die externe Finanzkontrolle, also die Prüfung der Haushalts- und Wirtschaftsführung des Landes auf Ordnungsmäßigkeit und Wirtschaftlichkeit.", correct: true },
+            { text: "Die Festlegung der Steuersätze für das kommende Jahr.", correct: false },
+            { text: "Die Genehmigung des Landeshaushalts.", correct: false },
+            { text: "Die Auszahlung von Gehältern an die Landesbediensteten.", correct: false }
+        ]
+    },
+    {
+        question: "Die \"Goldene Regel\" der Finanzpolitik besagt, dass...",
+        answers: [
+            { text: "die kreditfinanzierte Neuverschuldung die Höhe der öffentlichen Nettoinvestitionen nicht übersteigen sollte.", correct: true },
+            { text: "der Staat niemals Schulden machen darf.", correct: false },
+            { text: "Steuern immer nach der Leistungsfähigkeit erhoben werden sollen.", correct: false },
+            { text: "der Haushalt immer ausgeglichen sein muss.", correct: false }
+        ]
+    },
+    {
+        question: "Die Einführung der Doppik in den Kommunen zielte vor allem darauf ab...",
+        answers: [
+            { text: "eine generationengerechtere und transparentere Darstellung des Ressourcenverbrauchs und der Vermögenslage zu erreichen.", correct: true },
+            { text: "die Buchführung zu vereinfachen und Personal einzusparen.", correct: false },
+            { text: "den Einfluss der Kommunalpolitik auf den Haushalt zu verringern.", correct: false },
+            { text: "die kommunale Verschuldung gesetzlich zu verbieten.", correct: false }
+        ]
+    },
+    {
+        question: "Richtig oder Falsch: Die Biersteuer ist in Deutschland eine Bundessteuer.",
+        answers: [
+            { text: "Falsch", correct: true },
+            { text: "Richtig", correct: false }
+        ]
+    },
+    {
+        question: "Richtig oder Falsch: In Deutschland gilt das Trennsystem, bei dem jede staatliche Ebene (Bund, Länder, Gemeinden) komplett eigene, voneinander getrennte Steuern hat.",
+        answers: [
+            { text: "Falsch", correct: true },
+            { text: "Richtig", correct: false }
+        ]
+    },
+    {
+        question: "Was versteht man unter \"kalte Progression\"?",
+        answers: [
+            { text: "Einen Effekt, bei dem eine Lohnerhöhung, die nur die Inflation ausgleicht, durch den progressiven Steuertarif zu einer höheren realen Steuerbelastung führt.", correct: true },
+            { text: "Den schrittweisen Abbau von staatlichen Schulden in kalten Wintermonaten.", correct: false },
+            { text: "Die sinkende Steuerlast bei sinkendem Einkommen.", correct: false },
+            { text: "Eine Steuererhöhung, die ohne Zustimmung des Parlaments erfolgt.", correct: false }
+        ]
+    },
+    {
+        question: "Welches Gremium ist in Deutschland für die Feststellung des Haushaltsgesetzes auf Bundesebene zuständig?",
+        answers: [
+            { text: "Der Deutsche Bundestag", correct: true },
+            { text: "Der Bundesrechnungshof", correct: false },
+            { text: "Das Bundesverfassungsgericht", correct: false },
+            { text: "Die Deutsche Bundesbank", correct: false }
+        ]
+    },
+    {
+        question: "Welche Aussage beschreibt das \"Bruttoprinzip\" im Haushaltsrecht?",
+        answers: [
+            { text: "Alle Einnahmen und Ausgaben müssen in voller Höhe und unverrechnet im Haushalt veranschlagt werden.", correct: true },
+            { text: "Nur der Nettogewinn einer staatlichen Beteiligung darf im Haushalt erscheinen.", correct: false },
+            { text: "Der Haushaltsplan muss die Bruttosozialprodukt-Entwicklung berücksichtigen.", correct: false },
+            { text: "Brutto-Gehälter der Beamten müssen detailliert aufgeschlüsselt werden.", correct: false }
+        ]
+    },
+    {
+        question: "Welche der folgenden Institutionen gehört NICHT zur öffentlichen Hand im Sinne der Finanzstatistik?",
+        answers: [
+            { text: "Die Volkswagen AG", correct: true },
+            { text: "Die Stadt Potsdam", correct: false },
+            { text: "Das Land Brandenburg", correct: false },
+            { text: "Die Deutsche Rentenversicherung Bund (Sozialversicherung)", correct: false }
         ]
     }
 ];
@@ -161,29 +274,55 @@ const progressText = document.getElementById('progress-text');
 const quizContent = document.getElementById('quiz-content');
 const resultsContainer = document.getElementById('results-container');
 const scoreText = document.getElementById('score-text');
+const percentageText = document.getElementById('percentage-text');
 const restartButton = document.getElementById('restart-btn');
 
+let shuffledQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
+/* Fisher-Yates (aka Knuth) Shuffle */
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex > 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
 function startQuiz() {
-    currentQuestionIndex = 0;
     score = 0;
+    currentQuestionIndex = 0;
+    shuffledQuestions = shuffle([...quizQuestions]);
+
     quizContent.classList.remove('hide');
     progressText.classList.remove('hide');
     resultsContainer.classList.add('hide');
     nextButton.classList.add('hide');
+
     showQuestion();
 }
 
 function showQuestion() {
     resetState();
-    let currentQuestion = quizQuestions[currentQuestionIndex];
+    let currentQuestion = shuffledQuestions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerText = currentQuestion.question;
     progressText.innerText = `Frage ${questionNo} von ${quizQuestions.length}`;
 
-    currentQuestion.answers.forEach(answer => {
+    let shuffledAnswers = shuffle([...currentQuestion.answers]);
+
+    shuffledAnswers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn');
@@ -220,7 +359,7 @@ function selectAnswer(e) {
         button.disabled = true;
     });
 
-    if (quizQuestions.length > currentQuestionIndex + 1) {
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
         showResults();
@@ -231,7 +370,11 @@ function showResults() {
     quizContent.classList.add('hide');
     progressText.classList.add('hide');
     resultsContainer.classList.remove('hide');
+
+    const percentage = Math.round((score / quizQuestions.length) * 100);
     scoreText.innerText = `Auswertung: Sie haben ${score} von ${quizQuestions.length} Fragen richtig beantwortet!`;
+    percentageText.innerText = `Das entspricht ${percentage}%.`;
+
     nextButton.classList.add('hide');
 }
 
